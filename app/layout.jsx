@@ -18,10 +18,15 @@ export const metadata = {
     },
 };
 
+import ChatWidget from '@/components/ChatWidget';
+
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.variable}>
-            <body>{children}</body>
+            <body>
+                {children}
+                <ChatWidget />
+            </body>
         </html>
     );
 }

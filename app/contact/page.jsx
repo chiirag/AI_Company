@@ -252,11 +252,11 @@ export default function ContactPage() {
                                     </div>
                                     <div className={styles.contactItem}>
                                         <span className={styles.contactLabel}>Phone</span>
-                                        <a href="tel:+1-800-555-0123">+1 (800) 555-0123</a>
+                                        <a href="tel:+918059492654">+91 80594 92654</a>
                                     </div>
                                     <div className={styles.contactItem}>
                                         <span className={styles.contactLabel}>Headquarters</span>
-                                        <p>123 AI Boulevard, Suite 100<br />San Francisco, CA 94105</p>
+                                        <p>412, AKD Towers, Sector 14<br />Gurugram, India</p>
                                     </div>
                                 </div>
                             </div>

@@ -119,11 +119,11 @@ export default function AboutPage() {
                             world-class solutions to enterprises worldwide.
                         </p>
                         <div className={styles.locations}>
-                            <span>San Francisco</span>
+                            <span>Gurugram</span>
                             <span>New York</span>
                             <span>London</span>
                             <span>Singapore</span>
-                            <span>Bangalore</span>
+                            <span>Bengaluru</span>
                             <span>Sydney</span>
                         </div>
                     </div>
