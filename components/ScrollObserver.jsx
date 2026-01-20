@@ -1,7 +1,10 @@
 'use client';
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollObserver() {
+    const pathname = usePathname();
+
     useEffect(() => {
         const observerOptions = {
             root: null,
@@ -17,14 +20,17 @@ export default function ScrollObserver() {
             });
         }, observerOptions);
 
-        const animatedElements = document.querySelectorAll('.scroll-animate');
-        animatedElements.forEach((el) => observer.observe(el));
+        // precise timing to ensure DOM is ready after navigation
+        const timeoutId = setTimeout(() => {
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            animatedElements.forEach((el) => observer.observe(el));
+        }, 100);
 
         return () => {
-            animatedElements.forEach((el) => observer.unobserve(el));
+            clearTimeout(timeoutId);
             observer.disconnect();
         };
-    }, []);
+    }, [pathname]); // Re-run effect when pathname changes
 
     return null;
 }
