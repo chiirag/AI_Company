@@ -4,6 +4,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './contact.module.css';
 
+// Web3Forms access key - get yours free at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = '0a2c2f0d-ea20-4450-88cb-006402bfb65a';
+
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -14,15 +17,61 @@ export default function ContactPage() {
         interest: '',
         message: '',
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        alert('Thank you for your interest! Our team will be in touch shortly.');
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_ACCESS_KEY,
+                    to: 'Chiragjaintohana@gmail.com',
+                    from_name: `${formData.firstName} ${formData.lastName}`,
+                    subject: `New Lead: ${formData.company} - ${formData.interest}`,
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    email: formData.email,
+                    company: formData.company,
+                    jobTitle: formData.jobTitle,
+                    interest: formData.interest,
+                    message: formData.message,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitStatus('success');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    company: '',
+                    jobTitle: '',
+                    interest: '',
+                    message: '',
+                });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -45,6 +94,22 @@ export default function ContactPage() {
                         <div className={styles.grid}>
                             <div className={styles.formSection}>
                                 <h2 className={styles.formTitle}>Talk to an Expert</h2>
+
+                                {submitStatus === 'success' && (
+                                    <div className={styles.successMessage}>
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                                        </svg>
+                                        Thank you! Our team will be in touch shortly.
+                                    </div>
+                                )}
+
+                                {submitStatus === 'error' && (
+                                    <div className={styles.errorMessage}>
+                                        Something went wrong. Please try again or email us directly.
+                                    </div>
+                                )}
+
                                 <form onSubmit={handleSubmit} className={styles.form}>
                                     <div className={styles.formRow}>
                                         <div className={styles.formGroup}>
@@ -117,12 +182,12 @@ export default function ContactPage() {
                                             required
                                         >
                                             <option value="">Select an area</option>
-                                            <option value="ai-ml">AI/ML Solutions</option>
-                                            <option value="data-engineering">Data Engineering</option>
-                                            <option value="genai">Generative AI</option>
-                                            <option value="analytics">Analytics & BI</option>
-                                            <option value="cloud">Cloud Modernization</option>
-                                            <option value="other">Other</option>
+                                            <option value="AI/ML Solutions">AI/ML Solutions</option>
+                                            <option value="Data Engineering">Data Engineering</option>
+                                            <option value="Generative AI">Generative AI</option>
+                                            <option value="Analytics & BI">Analytics & BI</option>
+                                            <option value="Cloud Modernization">Cloud Modernization</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
 
@@ -138,8 +203,12 @@ export default function ContactPage() {
                                         />
                                     </div>
 
-                                    <button type="submit" className={styles.submitButton}>
-                                        Submit Request
+                                    <button
+                                        type="submit"
+                                        className={styles.submitButton}
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? 'Sending...' : 'Submit Request'}
                                     </button>
                                 </form>
                             </div>
@@ -179,7 +248,7 @@ export default function ContactPage() {
                                     <h3>Other Ways to Reach Us</h3>
                                     <div className={styles.contactItem}>
                                         <span className={styles.contactLabel}>Email</span>
-                                        <a href="mailto:hello@nexusai.com">hello@nexusai.com</a>
+                                        <a href="mailto:Chiragjaintohana@gmail.com">Chiragjaintohana@gmail.com</a>
                                     </div>
                                     <div className={styles.contactItem}>
                                         <span className={styles.contactLabel}>Phone</span>

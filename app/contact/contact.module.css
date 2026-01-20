@@ -61,6 +61,35 @@
     margin-bottom: var(--space-8);
 }
 
+.successMessage {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--success);
+    border-radius: var(--radius-lg);
+    color: var(--success);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-6);
+}
+
+.successMessage svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.errorMessage {
+    padding: var(--space-4);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-lg);
+    color: var(--error);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-6);
+}
+
 .form {
     display: flex;
     flex-direction: column;
