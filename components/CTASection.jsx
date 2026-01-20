@@ -3,7 +3,7 @@ import styles from './CTASection.module.css';
 
 export default function CTASection() {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} scroll-animate`}>
             <div className={styles.background}>
                 <div className={styles.gradientOrb1}></div>
                 <div className={styles.gradientOrb2}></div>

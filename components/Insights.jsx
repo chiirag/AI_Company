@@ -30,7 +30,7 @@ const insights = [
 
 export default function Insights() {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} scroll-animate`}>
             <div className={styles.container}>
                 <div className={styles.header}>
                     <div className={styles.headerContent}>

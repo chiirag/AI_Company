@@ -63,7 +63,7 @@ function Counter({ end, suffix = '', prefix = '', duration = 2000 }) {
 
 export default function Stats() {
     return (
-        <section className={styles.stats}>
+        <section className={`${styles.stats} scroll-animate`}>
             <div className={styles.container}>
                 <div className={styles.grid}>
                     {stats.map((stat, index) => (

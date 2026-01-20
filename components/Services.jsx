@@ -66,7 +66,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} scroll-animate`}>
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.eyebrow}>Our Services</span>

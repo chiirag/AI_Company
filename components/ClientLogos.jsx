@@ -11,7 +11,7 @@ const clients = [
 
 export default function ClientLogos() {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} scroll-animate`}>
             <div className={styles.container}>
                 <p className={styles.label}>Trusted by leading enterprises worldwide</p>
                 <div className={styles.logoTrack}>

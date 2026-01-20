@@ -1,11 +1,13 @@
 'use client';
 import Link from 'next/link';
 import styles from './Hero.module.css';
+import HeroParticles from './HeroParticles';
 
 export default function Hero() {
     return (
         <section className={styles.hero}>
             <div className={styles.background}>
+                <HeroParticles />
                 <div className={styles.gradientOrb1}></div>
                 <div className={styles.gradientOrb2}></div>
                 <div className={styles.gridPattern}></div>

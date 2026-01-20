@@ -41,7 +41,7 @@ const industries = [
 
 export default function Industries() {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} scroll-animate`}>
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.eyebrow}>Industries We Serve</span>

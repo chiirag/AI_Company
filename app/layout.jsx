@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import ChatWidget from '@/components/ChatWidget';
+import ScrollObserver from '@/components/ScrollObserver';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -18,12 +20,11 @@ export const metadata = {
     },
 };
 
-import ChatWidget from '@/components/ChatWidget';
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.variable}>
             <body>
+                <ScrollObserver />
                 {children}
                 <ChatWidget />
             </body>
