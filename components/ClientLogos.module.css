@@ -1,0 +1,69 @@
+.section {
+    padding: var(--space-16) 0;
+    background: var(--gray-50);
+    overflow: hidden;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.label {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--gray-500);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-8);
+}
+
+.logoTrack {
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.logos {
+    display: flex;
+    gap: var(--space-12);
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logoInner {
+    padding: var(--space-4) var(--space-8);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--gray-600);
+    white-space: nowrap;
+    transition: all var(--transition-base);
+}
+
+.logoInner:hover {
+    border-color: var(--primary-300);
+    color: var(--primary-600);
+    box-shadow: var(--shadow-md);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

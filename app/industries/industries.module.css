@@ -1,0 +1,155 @@
+.hero {
+    padding: var(--space-32) 0 var(--space-16);
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--primary-300);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4);
+}
+
+.title {
+    font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+    font-weight: var(--font-bold);
+    color: var(--white);
+    margin-bottom: var(--space-6);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.industries {
+    padding: var(--space-24) 0;
+    background: var(--gray-50);
+}
+
+.industryCard {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-12);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-base);
+}
+
+.industryCard:hover {
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-200);
+}
+
+.industryCard:last-child {
+    margin-bottom: 0;
+}
+
+.industryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.industryName {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--gray-900);
+}
+
+.stat {
+    text-align: right;
+    padding: var(--space-4) var(--space-6);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+}
+
+.statValue {
+    display: block;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.statLabel {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+.industryDescription {
+    font-size: var(--text-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+    max-width: 800px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.columnTitle {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-4);
+}
+
+.list {
+    list-style: none;
+}
+
+.list li {
+    padding: var(--space-2) 0;
+    padding-left: var(--space-6);
+    color: var(--gray-700);
+    position: relative;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-500);
+}
+
+@media (max-width: 768px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+
+    .industryCard {
+        padding: var(--space-8);
+    }
+
+    .stat {
+        width: 100%;
+        text-align: left;
+    }
+}

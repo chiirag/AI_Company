@@ -1,0 +1,125 @@
+.hero {
+    padding: var(--space-32) 0 var(--space-16);
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--primary-300);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4);
+}
+
+.title {
+    font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+    font-weight: var(--font-bold);
+    color: var(--white);
+    margin-bottom: var(--space-6);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.services {
+    padding: var(--space-24) 0;
+    background: var(--gray-50);
+}
+
+.serviceCard {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-12);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-base);
+}
+
+.serviceCard:hover {
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-200);
+}
+
+.serviceCard:last-child {
+    margin-bottom: 0;
+}
+
+.serviceContent {
+    max-width: 800px;
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-6);
+    color: var(--white);
+}
+
+.iconWrapper svg {
+    width: 32px;
+    height: 32px;
+}
+
+.serviceTitle {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-4);
+}
+
+.serviceDescription {
+    font-size: var(--text-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-base);
+    color: var(--gray-700);
+}
+
+.checkIcon {
+    width: 20px;
+    height: 20px;
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceCard {
+        padding: var(--space-8);
+    }
+}

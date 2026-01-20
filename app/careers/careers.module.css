@@ -1,0 +1,196 @@
+.hero {
+    padding: var(--space-32) 0 var(--space-16);
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--primary-300);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4);
+}
+
+.title {
+    font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+    font-weight: var(--font-bold);
+    color: var(--white);
+    margin-bottom: var(--space-6);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto var(--space-8);
+    line-height: 1.7;
+}
+
+.heroButton {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-4) var(--space-8);
+    background: var(--white);
+    color: var(--primary-600);
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.heroButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sectionTitle {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-12);
+    text-align: center;
+}
+
+.culture {
+    padding: var(--space-24) 0;
+    background: var(--white);
+}
+
+.cultureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.cultureCard {
+    padding: var(--space-8);
+    background: var(--gray-50);
+    border-radius: var(--radius-xl);
+    text-align: center;
+}
+
+.cultureCard h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-3);
+}
+
+.cultureCard p {
+    font-size: var(--text-base);
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.benefits {
+    padding: var(--space-24) 0;
+    background: var(--gray-50);
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.benefitCard {
+    background: var(--white);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+}
+
+.benefitTitle {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-2);
+}
+
+.benefitDescription {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.openings {
+    padding: var(--space-24) 0;
+    background: var(--white);
+}
+
+.jobList {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.jobCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-6);
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    margin-bottom: var(--space-4);
+    transition: all var(--transition-base);
+}
+
+.jobCard:hover {
+    border-color: var(--primary-300);
+    box-shadow: var(--shadow-lg);
+}
+
+.jobTitle {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--gray-900);
+    margin-bottom: var(--space-2);
+}
+
+.jobMeta {
+    display: flex;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--gray-500);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-500);
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+}
+
+.jobCard:hover .arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+
+    .cultureGrid,
+    .benefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cultureGrid,
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobMeta {
+        flex-wrap: wrap;
+    }
+}
