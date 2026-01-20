@@ -11,12 +11,12 @@ export const metadata = {
 const leadership = [
     { name: 'Chirag Jain', title: 'CEO', bio: 'Visionary leader driving enterprise AI transformation with 15+ years of experience.', image: '/team/chirag-jain.jpg' },
     { name: 'Naman Nanda', title: 'CTO', bio: 'Technology strategist with deep expertise in scalable AI/ML systems.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=NN&backgroundColor=7c3aed' },
-    { name: 'Chahat Sharma', title: 'CSO', bio: 'Strategic mastermind shaping go-to-market and business development.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=CS&backgroundColor=06b6d4' },
-    { name: 'Lipi Gulati', title: 'CMO', bio: 'Marketing leader building global brand presence and thought leadership.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=LG&backgroundColor=10b981' },
+    { name: 'Chahat Sharma', title: 'CSO', bio: 'Strategic mastermind shaping go-to-market and business development.', image: '/team/chahat-sharma.jpg' },
+    { name: 'Lipi Gulati', title: 'CMO', bio: 'Marketing leader building global brand presence and thought leadership.', image: '/team/lipi-gulati.jpg' },
     { name: 'Ajay Sharma', title: 'Head of AI', bio: 'AI pioneer leading innovation in machine learning and generative AI.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=AS&backgroundColor=f59e0b' },
     { name: 'Vishal Mehra', title: 'Director AI', bio: 'Expert in deploying production-grade AI solutions for Fortune 500 clients.', image: '/team/vishal-mehra.jpg' },
-    { name: 'Amandeep Kaur', title: 'Director Data Science', bio: 'Data science leader driving insights and analytics excellence.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=AK&backgroundColor=8b5cf6' },
-    { name: 'Abhisar Sharma', title: 'Senior Manager, AI', bio: 'AI practitioner delivering impactful solutions across industries.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=AbS&backgroundColor=0ea5e9' },
+    { name: 'Amandeep Kaur', title: 'Director Data Science', bio: 'Data science leader driving insights and analytics excellence.', image: '/team/amandeep-kaur.jpg' },
+    { name: 'Abhisar Sharma', title: 'Senior Manager, AI', bio: 'AI practitioner delivering impactful solutions across industries.', image: '/team/abhisar-sharma.jpg' },
     { name: 'Anukriti Sahni', title: 'Head HR', bio: 'People champion fostering culture, talent, and organizational growth.', image: 'https://api.dicebear.com/7.x/initials/svg?seed=AnS&backgroundColor=ec4899' },
 ];
 
