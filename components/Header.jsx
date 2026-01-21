@@ -40,7 +40,7 @@ export default function Header() {
                             </defs>
                         </svg>
                     </div>
-                    <span className={styles.logoText}>NexusAI</span>
+                    <span className={styles.logoText}>Qiro AI</span>
                 </Link>
 
                 <nav className={styles.nav}>

@@ -215,7 +215,7 @@ export default function ContactPage() {
 
                             <div className={styles.infoSection}>
                                 <div className={styles.infoCard}>
-                                    <h3>Why Choose NexusAI?</h3>
+                                    <h3>Why Choose Qiro AI?</h3>
                                     <ul className={styles.trustList}>
                                         <li>
                                             <svg viewBox="0 0 20 20" fill="currentColor">

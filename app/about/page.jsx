@@ -4,8 +4,8 @@ import CTASection from '@/components/CTASection';
 import styles from './about.module.css';
 
 export const metadata = {
-    title: 'About Us | NexusAI',
-    description: 'Learn about NexusAI - our mission, leadership, and global presence in AI and data transformation.',
+    title: 'About Us | Qiro AI',
+    description: 'Learn about Qiro AI - our mission, leadership, and global presence in AI and data transformation.',
 };
 
 const leadership = [

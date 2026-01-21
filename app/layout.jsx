@@ -10,11 +10,11 @@ const inter = Inter({
 });
 
 export const metadata = {
-    title: 'NexusAI | Enterprise AI & Analytics Solutions',
+    title: 'Qiro AI | Enterprise AI & Analytics Solutions',
     description: 'Transform your business with enterprise-grade AI, analytics, and data engineering solutions. Drive measurable outcomes with our industry-leading expertise.',
     keywords: 'AI consulting, data analytics, machine learning, enterprise AI, digital transformation, data engineering',
     openGraph: {
-        title: 'NexusAI | Enterprise AI & Analytics Solutions',
+        title: 'Qiro AI | Enterprise AI & Analytics Solutions',
         description: 'Transform your business with enterprise-grade AI, analytics, and data engineering solutions.',
         type: 'website',
     },

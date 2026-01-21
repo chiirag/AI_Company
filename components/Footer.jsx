@@ -44,7 +44,7 @@ export default function Footer() {
                                     </defs>
                                 </svg>
                             </div>
-                            <span className={styles.logoText}>NexusAI</span>
+                            <span className={styles.logoText}>Qiro AI</span>
                         </Link>
                         <p className={styles.tagline}>
                             Transforming enterprises with AI-powered insights and data-driven decision intelligence.
@@ -100,7 +100,7 @@ export default function Footer() {
 
                 <div className={styles.bottom}>
                     <p className={styles.copyright}>
-                        © {new Date().getFullYear()} NexusAI. All rights reserved.
+                        © {new Date().getFullYear()} Qiro AI. All rights reserved.
                     </p>
                     <div className={styles.legal}>
                         <Link href="/privacy" className={styles.legalLink}>Privacy Policy</Link>

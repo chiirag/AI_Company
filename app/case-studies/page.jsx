@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from './casestudies.module.css';
 
 export const metadata = {
-    title: 'Case Studies | NexusAI',
+    title: 'Case Studies | Qiro AI',
     description: 'Explore our success stories with measurable business outcomes across industries.',
 };
 

@@ -4,7 +4,7 @@ import CTASection from '@/components/CTASection';
 import styles from './industries.module.css';
 
 export const metadata = {
-    title: 'Industries | NexusAI',
+    title: 'Industries | Qiro AI',
     description: 'Deep expertise across Retail, CPG, Financial Services, Healthcare, and Manufacturing sectors.',
 };
 

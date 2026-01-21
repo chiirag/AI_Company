@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from './solutions.module.css';
 
 export const metadata = {
-    title: 'Solutions | NexusAI',
+    title: 'Solutions | Qiro AI',
     description: 'Use-case driven AI solutions for personalization, forecasting, optimization, and automation.',
 };
 

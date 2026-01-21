@@ -5,7 +5,7 @@ import styles from './ChatWidget.module.css';
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { role: 'assistant', content: 'Hi there! 👋 I\'m NexusAI\'s enterprise assistant. How can I help you accelerate your business today?' }
+        { role: 'assistant', content: 'Hi there! 👋 I\'m Qiro AI\'s enterprise assistant. How can I help you accelerate your business today?' }
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -58,7 +58,7 @@ export default function ChatWidget() {
                 <div className={styles.chatWindow}>
                     <div className={styles.header}>
                         <div>
-                            <div className={styles.headerTitle}>NexusAI Assistant</div>
+                            <div className={styles.headerTitle}>Qiro AI Assistant</div>
                             <div className={styles.headerSubtitle}>
                                 <div className={styles.onlineIndicator} />
                                 Online

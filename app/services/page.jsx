@@ -4,7 +4,7 @@ import CTASection from '@/components/CTASection';
 import styles from './services.module.css';
 
 export const metadata = {
-    title: 'Services | NexusAI',
+    title: 'Services | Qiro AI',
     description: 'Comprehensive AI, data engineering, analytics, and cloud solutions for enterprise transformation.',
 };
 

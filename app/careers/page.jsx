@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './careers.module.css';
 
 export const metadata = {
-    title: 'Careers | NexusAI',
+    title: 'Careers | Qiro AI',
     description: 'Join our team of innovators and help shape the future of AI and analytics.',
 };
 
@@ -47,7 +47,7 @@ export default function CareersPage() {
 
                 <section className={styles.culture}>
                     <div className={styles.container}>
-                        <h2 className={styles.sectionTitle}>Why NexusAI?</h2>
+                        <h2 className={styles.sectionTitle}>Why Qiro AI?</h2>
                         <div className={styles.cultureGrid}>
                             <div className={styles.cultureCard}>
                                 <h3>Work on Impactful Problems</h3>
